@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: batch_tracer_operations
+      POSTGRES_USER: batch_tracer
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD in your shell}
+    ports:
+      - "127.0.0.1:55433:5432"
+    volumes:
+      - traceability_data:/var/lib/postgresql/data
+volumes:
+  traceability_data:

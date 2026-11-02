@@ -1,0 +1,7 @@
+backend/.env
+.env
+frontend/.env.local
+artifacts/test-*
+*.log
+node_modules/
+vendor/
